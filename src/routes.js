@@ -1,9 +1,17 @@
 import { Router } from 'express';
 
+import User from './app/models/User';
+
 const routes = new Router();
 
-routes.get('/', (req, res) => {
-  return res.json({ message: 'hello omni' });
+routes.get('/', async (req, res) => {
+  const user = await User.create({
+    name: 'gui',
+    email: 'gui',
+    password_hash: '123',
+  });
+
+  return res.json(user);
 });
 
 export default routes;
