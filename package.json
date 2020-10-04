@@ -27,6 +27,7 @@
     "pg": "7.0.0",
     "pg-hstore": "^2.3.3",
     "sequelize": "5.18.4",
+    "youch": "^2.1.1",
     "yup": "^0.29.3"
   },
   "devDependencies": {
